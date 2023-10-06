@@ -1,0 +1,290 @@
+:root, * {
+    font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+    --theme-main-color: #0067b8;
+    --tag-color: #ffb900;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding-inline: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #262626;
+}
+
+.nav-left,
+.nav-right,
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 14px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-right li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.logo-container {
+    width: 108px;
+    margin-right: 10px;
+}
+
+.logo-container img {
+    width: 100%;
+}
+
+.nav-right > ul > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right > ul > li img {
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.banner-container {
+    min-height: 20rem;
+    height: 30vw;
+    max-height: 50vh;
+    padding-block: 40px;
+    background-image: url('assets/banner.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-inline: 20vw;
+}
+
+.content {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1 {
+    font-size: 29px;
+    font-weight: 500;
+}
+
+.content p {
+    padding-block: 16px;
+}
+
+.content a {
+    display: inline-block;
+    align-self: start;
+    padding: 6px 12px;
+    margin-top: 6px;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 500;
+    background-color: var(--theme-main-color);
+}
+
+.features {
+    margin-block: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features ul {
+    display: flex;
+    gap: 24px;
+}
+
+.features ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.features ul li a {
+    font-weight: 500;
+    color: var(--theme-main-color);
+}
+
+.features img {
+    width: 40px;
+}
+
+.business h2 {
+    font-size: 29px;
+    font-weight: 500;
+    margin-block: 14px;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    /* flex-direction: column; */
+}
+
+.card-container .card {
+    flex-basis: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .tag {
+    align-self: start;
+    padding: 6px 12px;
+    background-color: var(--tag-color);
+    font-weight: 500;
+    font-size: 16px;
+    margin-block: 6px;
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card p {
+    margin-block: 12px;
+}
+
+.card a {
+    color: var(--theme-main-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Mobile */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 12px;
+    border-bottom: solid 1px #eee;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav div {
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-nav img {
+    width: 24px;
+    height: 24px;
+}
+
+img.logo {
+    width: 108px;
+    height: 23px;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        padding-inline: 14px;
+    }
+    
+    
+    nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .features ul {
+        flex-direction: column;
+    }
+
+    .banner-wrapper {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .banner-container {
+        background-image: url("./assets/mobile/mobile-banner.jpg")
+    }
+
+    .content {
+        position: static;
+        margin-block: 30px;
+    }
+
+    .business h2 {
+        font-size: 24px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+    }
+}
